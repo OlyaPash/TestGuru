@@ -2,6 +2,8 @@ Test Guru
 
 List of entities (real world objects) for the TestGuru project:
 
+* Category
+
 * Tests
 
 * Questions
@@ -9,6 +11,8 @@ List of entities (real world objects) for the TestGuru project:
 * Answers
 
 * Users(выбор тестов, прохождение. создание и управление тестами)
+
+* Result
 
 
 Возможности Test Guru:
