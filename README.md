@@ -8,9 +8,7 @@ List of entities (real world objects) for the TestGuru project:
 
 * Answers
 
-* Users(выбор тестов, прохождение)
-
-* Admins(создание и управление тестов)
+* Users(выбор тестов, прохождение. создание и управление тестами)
 
 
 Возможности Test Guru:
