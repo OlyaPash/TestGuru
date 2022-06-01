@@ -1,24 +1,26 @@
-# README
+Test Guru
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+List of entities (real world objects) for the TestGuru project:
 
-Things you may want to cover:
+* Tests
 
-* Ruby version
+* Questions
 
-* System dependencies
+* Answers
 
-* Configuration
+* Users(выбор тестов, прохождение)
 
-* Database creation
+* Admins(создание и управление тестов)
 
-* Database initialization
 
-* How to run the test suite
+Возможности Test Guru:
 
-* Services (job queues, cache servers, search engines, etc.)
+* Создание тестов и управление ими
 
-* Deployment instructions
+* Аутентификация
 
-* ...
+* Базовое разграничение доступа
+
+* Выполнение тестов
+
+* Публикация результатов в соцсети
