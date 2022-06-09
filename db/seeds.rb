@@ -20,7 +20,7 @@ answers = Answer.create!([
   { body: "Ruby Framework", question: questions[1] },
   { body: "Ruby On Rails", correct: true, question: questions[1] },
   { body: "Ruby Web", question: questions[1] },
-  { body: "Новиград, Оксенфурт и Вызима" correct: true, question: questions[2] },
+  { body: "Новиград, Оксенфурт и Вызима", correct: true, question: questions[2] },
   { body: "Новиград, Боклер и Каэр Трольде", question: questions[2] },
   { body: "Новиград, Оксенфурт и Флотзам", question: questions[2] },
   { body: "В Шире", correct: true, question: questions[3] },
