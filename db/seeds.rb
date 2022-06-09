@@ -1,3 +1,17 @@
+users = User.create!([
+  { name: "Анджей Сапковский" },
+  { name: "Дж. Р. Р. Толкин" },
+  { name: "Тимоти Джон Бернерс-Ли" },
+  { name: "Юкихиро Мацумото" }
+])
+
+categories = Category.create!([
+  { title: "Game" },
+  { title: "Programming language" },
+  { title: "HyperText Markup Language" },
+  { title: "Fantasy genre" }
+])
+
 tests = Test.create!([
   { title: "Ruby", level: 1, category: categories[1], author: users[3] },
   { title: "The Witcher", level: 3, category: categories[0], author: users[0] },
@@ -29,18 +43,4 @@ answers = Answer.create!([
   { body: "<th>", question: questions[4] },
   { body: "<td>", question: questions[4] },
   { body: "<tr>", correct: true, question: questions[4] }
-])
-
-users = User.create!([
-  { name: "Анджей Сапковский" },
-  { name: "Дж. Р. Р. Толкин" },
-  { name: "Тимоти Джон Бернерс-Ли" },
-  { name: "Юкихиро Мацумото" }
-])
-
-categories = Category.create!([
-  { title: "Game" },
-  { title: "Programming language" },
-  { title: "HyperText Markup Language" },
-  { title: "Fantasy genre" }
 ])
