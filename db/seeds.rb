@@ -13,34 +13,34 @@ categories = Category.create!([
 ])
 
 tests = Test.create!([
-  { title: "Ruby", level: 1, category_id: categories[1], author: users[3] },
-  { title: "The Witcher", level: 3, category_id: categories[0], author: users[0] },
-  { title: "Movie", level: 2, category_id: categories[3], author: users[1] },
-  { title: "HTML", level: 2, category_id: categories[2], author: users[2] }
+  { title: "Ruby", level: 1, category_id: categories[1], author_id: users[3] },
+  { title: "The Witcher", level: 3, category_id: categories[0], author_id: users[0] },
+  { title: "Movie", level: 2, category_id: categories[3], author_id: users[1] },
+  { title: "HTML", level: 2, category_id: categories[2], author_id: users[2] }
 ])
 
 questions = Question.create!([
-  { body: "Кем оказывается заколдованный Ума", test: tests[1] },
-  { body: "Как называется самый популярный фреймворк языка Ruby для веба?", test: tests[0] },
-  { body: "Какие три города Геральт посетил в основной игре «Дикая Охота»?", test: tests[1] },
-  { body: "Где проживал Фродо Бэггинс?", test: tests[2] },
-  { body: "С помощью какого тега в таблицах создаются строки?", test: tests[3] }
+  { body: "Кем оказывается заколдованный Ума", test_id: tests[1] },
+  { body: "Как называется самый популярный фреймворк языка Ruby для веба?", test_id: tests[0] },
+  { body: "Какие три города Геральт посетил в основной игре «Дикая Охота»?", test_id: tests[1] },
+  { body: "Где проживал Фродо Бэггинс?", test_id: tests[2] },
+  { body: "С помощью какого тега в таблицах создаются строки?", test_id: tests[3] }
 ])
 
 answers = Answer.create!([
-  { body: "Скьялль", question: questions[0] },
-  { body: "Цири", question: questions[0] },
-  { body: "Аваллак'х", correct: true, question: questions[0] },
-  { body: "Ruby Framework", question: questions[1] },
-  { body: "Ruby On Rails", correct: true, question: questions[1] },
-  { body: "Ruby Web", question: questions[1] },
-  { body: "Новиград, Оксенфурт и Вызима", correct: true, question: questions[2] },
-  { body: "Новиград, Боклер и Каэр Трольде", question: questions[2] },
-  { body: "Новиград, Оксенфурт и Флотзам", question: questions[2] },
-  { body: "В Шире", correct: true, question: questions[3] },
-  { body: "В Лориэне", question: questions[3] },
-  { body: "В Хогсмиде", question: questions[3] },
-  { body: "<th>", question: questions[4] },
-  { body: "<td>", question: questions[4] },
-  { body: "<tr>", correct: true, question: questions[4] }
+  { body: "Скьялль", question_id: questions[0] },
+  { body: "Цири", question_id: questions[0] },
+  { body: "Аваллак'х", correct: true, question_id: questions[0] },
+  { body: "Ruby Framework", question_id: questions[1] },
+  { body: "Ruby On Rails", correct: true, question_id: questions[1] },
+  { body: "Ruby Web", question_id: questions[1] },
+  { body: "Новиград, Оксенфурт и Вызима", correct: true, question_id: questions[2] },
+  { body: "Новиград, Боклер и Каэр Трольде", question_id: questions[2] },
+  { body: "Новиград, Оксенфурт и Флотзам", question_id: questions[2] },
+  { body: "В Шире", correct: true, question_id: questions[3] },
+  { body: "В Лориэне", question_id: questions[3] },
+  { body: "В Хогсмиде", question_id: questions[3] },
+  { body: "<th>", question_id: questions[4] },
+  { body: "<td>", question_id: questions[4] },
+  { body: "<tr>", correct: true, question_id: questions[4] }
 ])
