@@ -1,3 +1,11 @@
+Answer.destroy_all
+Question.destroy_all
+Test.destroy_all
+Category.destroy_all
+User.destroy_all
+UserPassedTest.destroy_all
+
+
 users = User.create!([
   { name: "Анджей Сапковский" },
   { name: "Дж. Р. Р. Толкин" },
@@ -43,4 +51,10 @@ answers = Answer.create!([
   { body: "<th>", question_id: questions[4].id },
   { body: "<td>", question_id: questions[4].id },
   { body: "<tr>", correct: true, question_id: questions[4].id }
+])
+
+user_passed_tests = UserPassedTest.create!([
+  {user_id: users[0].id, test_id: tests[1].id},
+  {user_id: users[2].id, test_id: tests[3].id},
+  {user_id: users[0].id, test_id: tests[2].id},
 ])
