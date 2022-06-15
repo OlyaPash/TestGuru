@@ -51,6 +51,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_10_063752) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["test_id"], name: "index_user_passed_tests_on_test_id"
+    t.index ["user_id", "test_id"], name: "index_user_passed_tests_on_user_id_and_test_id", unique: true
     t.index ["user_id"], name: "index_user_passed_tests_on_user_id"
   end
 
