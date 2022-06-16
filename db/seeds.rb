@@ -7,10 +7,10 @@ UserPassedTest.destroy_all
 
 
 users = User.create!([
-  { name: "Анджей Сапковский" },
-  { name: "Дж. Р. Р. Толкин" },
-  { name: "Тимоти Джон Бернерс-Ли" },
-  { name: "Юкихиро Мацумото" }
+  { name: "Анджей Сапковский", email: "andg@gmail.com" },
+  { name: "Дж. Р. Р. Толкин", email: "dj@gmail.com" },
+  { name: "Тимоти Джон Бернерс-Ли", email: "timoty@gmail.com" },
+  { name: "Юкихиро Мацумото", email: "ukihi@gmail.com" }
 ])
 
 categories = Category.create!([
@@ -24,7 +24,7 @@ tests = Test.create!([
   { title: "Ruby", level: 1, category: categories[1], author: users[3] },
   { title: "The Witcher", level: 3, category: categories[0], author: users[0] },
   { title: "Movie", level: 2, category: categories[3], author: users[1] },
-  { title: "HTML", level: 2, category: categories[2], author: users[2] }
+  { title: "HTML", level: 4, category: categories[2], author: users[2] }
 ])
 
 questions = Question.create!([
