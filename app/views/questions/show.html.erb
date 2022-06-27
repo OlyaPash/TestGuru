@@ -1,0 +1,8 @@
+<h3>Вопрос теста - <%= @question.test.title %></h3>
+
+<p>
+  <%= @question.body %>
+</p>
+
+<%= link_to 'Edit', edit_question_path(@question) %> |
+<%= link_to 'Back', @question.test %>
