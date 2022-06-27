@@ -52,7 +52,7 @@ class TestsController < ApplicationController
   end
 
   def find_questions
-    @questions = @test.questions
+    @question = @test.questions
   end
 
   def rescue_with_test_not_found

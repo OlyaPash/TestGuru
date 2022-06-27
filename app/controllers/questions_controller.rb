@@ -1,46 +1,46 @@
 class QuestionsController < ApplicationController
 
-  before_action :find_test, only: [:create, :index]
-  before_action :find_questions, only: [:show, :destroy]
+  before_action :find_test, only: [:create, :new]
+  before_action :find_question, only: [:edit, :update, :show, :destroy]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
 
-  def index
-    questions = @test.questions.pluck(:body)
-    render plain: questions.join("; ")
+  def show; end
 
-    # render json: @test.questions
+  def new
+    @question = @test.questions.new
   end
 
-  def show
-    render plain: @question.body
-
-    # render json: @question
-  end
-
-  def new; end
+  def edit; end
 
   def create
     @question = @test.questions.build(questions_params)
+
     if @question.save
-      redirect_to @question
+      redirect_to @test
     else
-      render 'new'
+      render :new
     end
   end
 
   def update
+    if @question.update(questions_params)
+      redirect_to @question.test
+    else
+      render :edit
+    end
   end
 
   def destroy
     @question.destroy
-    render plain: 'Вопрос был удален!'
+
+    redirect_to @question.test
   end
 
   private
 
   def questions_params
-    params.require(:question).permit(:body)
+    params.require(:question).permit(:body, :test_id)
   end
 
   def find_test
@@ -48,7 +48,7 @@ class QuestionsController < ApplicationController
   end
 
   def find_question
-    @questions = Question.find(params[:id])
+    @question = Question.find(params[:id])
   end
 
   def rescue_with_question_not_found
