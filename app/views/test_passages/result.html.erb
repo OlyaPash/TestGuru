@@ -2,9 +2,9 @@
 
 <p>
   <% if @test_passage.done? %>
-    <span class="done">Test passed successfully, your result is: <%= @test_passage.correct_percent %><%="%"%></span>
+    Test passed successfully, your result is:<span class="done"> <%= @test_passage.correct_percent %><%="%"%></span>
   <% else %>
-    <span class="failed">Test failed, your result is: <%= @test_passage.correct_percent %><%="%"%></span>
+    Test failed, your result is:<span class="failed"> <%= @test_passage.correct_percent %><%="%"%></span>
   <% end %>  
 </p>
 

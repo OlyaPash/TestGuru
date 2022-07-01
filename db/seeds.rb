@@ -1,6 +1,6 @@
+TestPassage.destroy_all
 Answer.destroy_all
 Question.destroy_all
-TestPassage.destroy_all
 Test.destroy_all
 Category.destroy_all
 User.destroy_all
@@ -52,4 +52,3 @@ answers = Answer.create!([
   { body: "<td>", question: questions[4] },
   { body: "<tr>", correct: true, question: questions[4] }
 ])
-
