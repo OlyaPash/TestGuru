@@ -1,9 +1,9 @@
+TestPassage.destroy_all
 Answer.destroy_all
 Question.destroy_all
 Test.destroy_all
 Category.destroy_all
 User.destroy_all
-UserPassedTest.destroy_all
 
 
 users = User.create!([
@@ -51,10 +51,4 @@ answers = Answer.create!([
   { body: "<th>", question: questions[4] },
   { body: "<td>", question: questions[4] },
   { body: "<tr>", correct: true, question: questions[4] }
-])
-
-user_passed_tests = UserPassedTest.create!([
-  {user: users[0], test: tests[1]},
-  {user: users[2], test: tests[3]},
-  {user: users[0], test: tests[2]},
 ])

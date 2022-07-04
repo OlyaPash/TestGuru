@@ -8,13 +8,13 @@
   <%= @test.level %>
 </p>
 
-<p>
-  <strong>Questions:</strong>
-  <table>
-    <%= render @test.questions %>
-  </table>
-</p>
+<h2>Questions:</h2>
 
-<%= link_to 'New question', new_test_question_path(@test) %> |
-<%= link_to 'Edit', edit_test_path(@test) %> |
+<%= link_to 'New question', new_test_question_path(@test) %>
+
+<ol>
+  <%= render @test.questions %>
+</ol>  
+
+<%= link_to 'Edit test', edit_test_path(@test) %> |
 <%= link_to 'Back', tests_path %>
