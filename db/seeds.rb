@@ -7,10 +7,10 @@ User.destroy_all
 
 
 users = User.create!([
-  { name: "Анджей Сапковский", email: "andg@gmail.com" },
-  { name: "Дж. Р. Р. Толкин", email: "dj@gmail.com" },
-  { name: "Тимоти Джон Бернерс-Ли", email: "timoty@gmail.com" },
-  { name: "Юкихиро Мацумото", email: "ukihi@gmail.com" }
+  { name: "Анджей Сапковский", email: "andg@gmail.com", password_digest: "guru1" },
+  { name: "Дж. Р. Р. Толкин", email: "dj@gmail.com", password_digest: "guru2" },
+  { name: "Тимоти Джон Бернерс-Ли", email: "timoty@gmail.com", password_digest: "guru3" },
+  { name: "Юкихиро Мацумото", email: "ukihi@gmail.com", password_digest: "guru4" }
 ])
 
 categories = Category.create!([
