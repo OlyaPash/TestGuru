@@ -12,7 +12,7 @@ class User < ApplicationRecord
   has_many :test_passages
   has_many :tests, through: :test_passages
 
-  # validates :name, presence: true
+  validates :name, presence: true
   validates :email, presence: true,
                     uniqueness: { scope: :email, message: "This email is already registered" },
                     format: {with: URI::MailTo::EMAIL_REGEXP, message: "Wrong format"}
