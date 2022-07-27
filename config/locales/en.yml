@@ -64,6 +64,8 @@ en:
       author: "Author"
       about: "The Test Guru application is designed to create, manage and execute various tests."
       thinknetica: "Educational project in an online school"
+    admin:
+      panel: "Admin Panel"
 
   shared:
     errors:
@@ -171,3 +173,9 @@ en:
   tests_mailer:
     completed_test:
       subject: "You just completed the TestGuru test!"
+
+  categories:
+    Fantasy genre: "Fantasy genre"
+    Game: "Game"
+    HyperText Markup Language: "HyperText Markup Language"
+    Programming language: "Programming language"

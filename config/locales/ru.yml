@@ -33,6 +33,8 @@ ru:
       author: "Автор"
       about: "Приложение Test Guru предназначено для создания, управления и выполнения различных тестов."
       thinknetica: "Учебный проект в онлайн-школе"
+    admin:
+      panel: "Панель администратора"
 
   shared:
     errors:
@@ -142,3 +144,9 @@ ru:
   tests_mailer:
     completed_test:
       subject: "Вы успешно завершили тест на TestGuru!"
+
+  categories:
+    Fantasy genre: "Жанр Фэнтези"
+    Game: "Игра"
+    HyperText Markup Language: "Язык гипертекстовой разметки"
+    Programming language: "Язык программирования"
