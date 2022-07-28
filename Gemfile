@@ -38,6 +38,10 @@ gem "jbuilder"
 
 gem "devise", "~> 4.0"
 
+# LOCALIZATION
+
+gem 'rails-i18n', '~> 7.0.0' # For 7.0.0
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 
