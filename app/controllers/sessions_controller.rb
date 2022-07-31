@@ -3,6 +3,6 @@ class SessionsController < Devise::SessionsController
   
   def create
     super
-    flash[:notise] = "Hello, #{@user.name}!"
+    flash[:notise] = "#{t(:hello_flash)}, #{@user.name}"
   end
 end

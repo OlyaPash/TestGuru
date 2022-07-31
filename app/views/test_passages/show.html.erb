@@ -1,23 +1,26 @@
-<h1><%= t('.passing') %> <%= @test_passage.test.title %> <%= t('.test') %></h1>
+<h2><%= t('.passing') %> <%= @test_passage.test.title %> <%= t('.test') %></h2><br>
 
 <b>
-  <%= t('.question') %> <%= @test_passage.number_current_questions %>
-  <%= t('.of') %>
-  <%= @test_passage.test.questions.count %>
-</b>  
-<br>
+  <p class="text-decoration-underline">
+    <%= t('.question') %> <%= @test_passage.number_current_questions %>
+    <%= t('.of') %>
+    <%= @test_passage.test.questions.count %>
+  </p>
+</b>
 <b>
   <%= @test_passage.current_question.body %>
 </b>
 
 <%= form_with url: test_passage_path(@test_passage), data: {turbo: false}, method: :put do |form| %>
-  <%= form.collection_check_boxes :answer_ids, @test_passage.current_question.answers, :id, :body, include_hidden: false do |b| %>
-    <p>
-      <%= b.check_box id: "answer_ids_#{b.object.id}" %>
-      <%= b.label %>
-    </p>
-  <% end %>
+  <div class="form-check">
+      <%= form.collection_check_boxes :answer_ids, @test_passage.current_question.answers, :id, :body, include_hidden: false do |b| %>
+        <p>
+          <%= b.check_box id: "answer_ids_#{b.object.id}" %>
+          <%= b.label %>
+        </p>
+      <% end %>
+    </div>
 
-  <p><%= form.submit t('.next') %></p>
-  <p><%= link_to t('.back'), tests_path %></p>
+  <p><%= form.submit t('.next'), class: 'btn btn-outline-primary' %></p>
+  <p><%= link_to t('.back'), tests_path, class: 'btn btn-outline-primary' %></p>
 <% end %>      

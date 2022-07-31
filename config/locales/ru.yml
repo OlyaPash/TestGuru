@@ -1,5 +1,6 @@
 ru:
   hello: "Привет мир"
+  hello_flash: "Привет"
 
   helpers:
     submit:
@@ -43,6 +44,11 @@ ru:
         many: "Обнаружено %{count} ошибок"
         one: "Обнаружена %{count} ошибка"
         other: "Обнаружено %{count} ошибки"
+    nav:
+      welcome: "Добро пожаловать"
+      logout: "Выйти"
+      login: "Вход"
+      registration: "Регистрация"
 
   tests:
     index:

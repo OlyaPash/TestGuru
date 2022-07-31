@@ -1,10 +1,10 @@
-<h1><%= t('.header', title: @test_passage.test.title) %></h1>
+<h2><p class="text-primary"><%= t('.header', title: @test_passage.test.title) %></p></h2>
 
 <p>
   <% if @test_passage.done? %>
-    <%= t('.test_passed') %>:<span class="done"> <%= @test_passage.correct_percent %><%="%"%></span>
+    <%= t('.test_passed') %>:<p class="text-success"><span class="done"> <%= @test_passage.correct_percent %><%="%"%></span></p>
   <% else %>
-    <%= t('.test_failed') %>:<span class="failed"> <%= @test_passage.correct_percent %><%="%"%></span>
+    <%= t('.test_failed') %>:<p class="text-danger"><span class="failed"> <%= @test_passage.correct_percent %><%="%"%></span></p>
   <% end %>  
 </p>
 

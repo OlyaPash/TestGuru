@@ -31,6 +31,7 @@
 
 en:
   hello: "Hello world"
+  hello_flash: "Hello"
 
   helpers:
     submit:
@@ -72,6 +73,11 @@ en:
       header:
         one: "%{count} error detected"
         other: "%{count} errors detected"
+    nav:
+      welcome: "Welcome"
+      logout: "Log out"
+      login: "Log in"
+      registration: "Sign in"
 
   tests:
     index:
