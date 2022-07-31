@@ -1,8 +1,9 @@
 <li>
-  <%= answer.body %><br>
-  <%= link_to t('.show'), admin_answer_path(answer) %> |
-  <%= link_to t('.edit'), edit_admin_answer_path(answer) %> |
-  <%= link_to t('.delete'), 
-              admin_answer_path(answer), 
-              data: {turbo_method: :delete, turbo_confirm: t('.delete_confirm')} %>
+  <td><%= answer.body %><br></td>
+  <td><%= link_to t('.show'), admin_answer_path(answer), class: 'btn btn-outline-primary' %></td> |
+  <td><%= link_to t('.edit'), edit_admin_answer_path(answer), class: 'btn btn-outline-primary' %></td> |
+  <td><%= link_to t('.delete'), 
+              admin_answer_path(answer),
+              class: 'btn btn-outline-primary', 
+              data: {turbo_method: :delete, turbo_confirm: t('.delete_confirm')} %></td>
 </li>
