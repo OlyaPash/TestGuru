@@ -66,8 +66,6 @@ ru:
         enter: "Войти"
     shared:
       links:
-        login: "Вход"
-        registration: "Регистрация"
         forgot_your_password: "Забыли пароль?"
         didn_t_receive_confirmation_instructions: "Не получили подтверждение?"
         didn_t_receive_unlock_instructions: "Не получили код разблокировки?"

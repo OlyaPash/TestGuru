@@ -66,8 +66,6 @@ en:
         enter: "Enter"
     shared:
       links:
-        login: "Log in"
-        registration: "Sign up"
         forgot_your_password: "Forgot your password?"
         didn_t_receive_confirmation_instructions: "Didn't receive confirmation instructions?"
         didn_t_receive_unlock_instructions: "Didn't receive unlock instructions?"
