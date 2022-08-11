@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   get 'sessions/new'
   get 'users/new'
 
+  resources :gists
+
   resources :tests, only: :index do
     member do
       post :start
@@ -17,6 +19,7 @@ Rails.application.routes.draw do
     member do
       get :result
     end
+    resources :gists, only: %i[new create], shallow: true
   end
 
   namespace :admin do
@@ -24,7 +27,8 @@ Rails.application.routes.draw do
       resources :questions, shallow: true, except: :index do
         resources :answers, shallow: true, except: :index
       end
-    end    
+    end
+    resources :gists, shallow: true, only: :index
   end
 
 end
