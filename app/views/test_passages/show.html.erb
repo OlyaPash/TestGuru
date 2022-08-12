@@ -22,7 +22,7 @@
       <% end %>
     </div>
 
-  <p><%= link_to 'Gist Question', test_passage_gists_path(@test_passage), method: :post, class: 'btn btn-outline-primary' %></p>
+  <p><%= link_to 'Gist Question', gist_test_passage_path(@test_passage), method: :post, class: 'btn btn-outline-primary' %></p>
   <p><%= form.submit t('.next'), class: 'btn btn-outline-primary' %></p>
   <p><%= link_to t('.back'), tests_path, class: 'btn btn-outline-primary' %></p>
 <% end %>
