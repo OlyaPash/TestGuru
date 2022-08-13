@@ -7,7 +7,7 @@ class Admin::GistsController < Admin::BaseController
   def destroy
     @gist = Gist.find(params[:id])
     @gist.destroy
-    reditect_to admin_gists_path
+    redirect_to admin_gists_path, status: :see_other
   end
 
 end

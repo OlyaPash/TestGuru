@@ -28,7 +28,11 @@ Rails.application.routes.draw do
         resources :answers, shallow: true, except: :index
       end
     end
-    resources :gists, only: :index
+    resources :gists, only: :index do
+      member do
+        delete :destroy
+      end
+    end
   end
 
 end
