@@ -1,5 +1,4 @@
 class Admin::GistsController < Admin::BaseController
-
   def index
     @gists = Gist.all
   end
@@ -9,5 +8,4 @@ class Admin::GistsController < Admin::BaseController
     @gist.destroy
     redirect_to admin_gists_path, status: :see_other
   end
-
 end
