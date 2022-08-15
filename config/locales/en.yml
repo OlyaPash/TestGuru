@@ -33,6 +33,10 @@ en:
   hello: "Hello world"
   hello_flash: "Hello"
 
+  success: "Gist was successfully created!"
+  link: "Link"
+  failure: "An error occurred while saving gist"
+
   helpers:
     submit:
       test:
@@ -102,6 +106,9 @@ en:
       of: "of"
       next: "Next"
       back: "Back to Tests"
+    gist:
+      success: "Gist was successfully created!"
+      failure: "An error occurred while saving gist"
 
   admin:
     tests:

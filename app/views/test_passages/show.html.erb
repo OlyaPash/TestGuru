@@ -7,11 +7,12 @@
     <%= @test_passage.test.questions.count %>
   </p>
 </b>
-<b>
-  <%= @test_passage.current_question.body %>
-</b>
 
-<%= form_with url: test_passage_path(@test_passage), data: {turbo: false}, method: :put do |form| %>
+<p>
+  <b><%= @test_passage.current_question.body %></b>
+</p>
+
+<%= form_with url: test_passage_path(@test_passage), method: :put do |form| %>
   <div class="form-check">
       <%= form.collection_check_boxes :answer_ids, @test_passage.current_question.answers, :id, :body, include_hidden: false do |b| %>
         <p>
@@ -23,4 +24,5 @@
 
   <p><%= form.submit t('.next'), class: 'btn btn-outline-primary' %></p>
   <p><%= link_to t('.back'), tests_path, class: 'btn btn-outline-primary' %></p>
-<% end %>      
+<% end %>
+<p><%= button_to 'Gist Question', test_passage_gists_path(@test_passage) %></p>

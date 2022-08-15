@@ -2,6 +2,10 @@ ru:
   hello: "Привет мир"
   hello_flash: "Привет"
 
+  success: "Gist успешно сохранён"
+  link: "Ссылка"
+  failure: "Во время сохранения gist произошла ошибка"
+
   helpers:
     submit:
       test:
@@ -73,6 +77,9 @@ ru:
       of: "из"
       next: "Далее"
       back: "Назад к тестам"
+    gist:
+      success: "Gist успешно сохранён!"
+      failure: "Во время сохранения gist произошла ошибка"
 
   admin:
     tests:

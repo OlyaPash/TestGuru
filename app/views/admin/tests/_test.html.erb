@@ -4,8 +4,9 @@
   <td><%= test.questions.count %></td>
   <td><%= link_to t('.show'), admin_test_path(test), class: 'btn btn-outline-primary' %></td>
   <td><%= link_to t('.edit'), edit_admin_test_path(test), class: 'btn btn-outline-primary' %></td>
-  <td><%= link_to t('.delete'), admin_test_path(test),
-                            class: 'btn btn-outline-primary',
-                            data: {turbo_method: :delete, turbo_confirm: t('.delete_confirm')} %>
+  <td><%= button_to t('.delete'), admin_test_path(test),
+                            method: :delete,
+                            class: 'btn btn-danger',
+                            form: { data: {turbo_confirm: t('.delete_confirm')} } %>
   </td>
 </tr>
