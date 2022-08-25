@@ -282,7 +282,6 @@ DEPENDENCIES
   debug
   devise (~> 4.0)
   dotenv-rails
-  faraday
   importmap-rails
   jbuilder
   jquery-rails

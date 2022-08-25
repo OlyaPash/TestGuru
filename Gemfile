@@ -39,7 +39,6 @@ gem "jbuilder"
 gem "devise", "~> 4.0"
 
 # NETWORKING
-gem 'faraday'
 
 gem "octokit", "~> 4.0"
 

@@ -1,41 +1,31 @@
 document.addEventListener('turbo:load', function() {
-  var password = document.getElementById('user_password')
-  var password_confirmation = document.getElementById('user_password_confirmation')
 
-  if (password && password_confirmation) {
-    password.addEventListener('input', checkPassword)
-    password_confirmation.addEventListener('input', checkPasswordConfirmation)
+  const control = document.querySelector('.password-confirmation-input')
+
+  if (control) {
+    const confirmation_input = document.getElementById('user_password_confirmation')
+    const password_input = document.getElementById('user_password')
+    const check_icon = document.querySelector('.octicon-check-circle-fill')
+    const x_icon = document.querySelector('.octicon-x-circle-fill')
+
+    control.addEventListener('input', function() {
+      confirmPassword(confirmation_input, password_input, check_icon, x_icon)
+    })
   }
 })
 
-function checkPassword() {
-  if (!this.value) { iconHide() }
-}
+function confirmPassword(confirmation_input, password_input, check_icon, x_icon) {
 
-function checkPasswordConfirmation() {
-  var password = document.getElementById('user_password')
-
-  if (password.value) {
-    (this.value == password.value) ? iconSuccess() : iconDanger()
+  if (confirmation_input.value == password_input.value) {
+    x_icon.classList.add('hide')
+    check_icon.classList.remove('hide')
+  } else {
+    x_icon.classList.remove('hide')
+    check_icon.classList.add('hide')
   }
 
-  if (!this.value) { iconHide() }
-}
-
-function iconSuccess() {
-  document.querySelector('.octicon-key').classList.remove('hide')
-  document.querySelector('.octicon-key').classList.remove('text-danger')
-  document.querySelector('.octicon-key').classList.add('text-success')
-}
-
-function iconDanger() {
-  document.querySelector('.octicon-key').classList.remove('hide')
-  document.querySelector('.octicon-key').classList.remove('text-success')
-  document.querySelector('.octicon-key').classList.add('text-danger')
-}
-
-function iconHide() {
-  document.querySelector('.octicon-key').classList.remove('text-success')
-  document.querySelector('.octicon-key').classList.remove('text-danger')
-  document.querySelector('.octicon-key').classList.add('hide')
+  if (confirmation_input.value == "") {
+    x_icon.classList.add('hide')
+    check_icon.classList.add('hide')
+  }
 }
