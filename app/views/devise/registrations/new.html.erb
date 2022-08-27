@@ -31,9 +31,11 @@
               <%= f.password_field :password, autocomplete: "new-password", class: 'form-control' %>
             </p>
 
-            <p>
+            <p class="password-confirmation-input pointer">
               <%= f.label t('.password_confirmation') %><br />
               <%= f.password_field :password_confirmation, autocomplete: "new-password", class: 'form-control' %>
+              <%= octicon 'check-circle-fill', height: 16, color: "green", class: 'text-success hide' %>
+              <%= octicon 'x-circle-fill', height: 16, color: "red", class: 'text-danger hide' %>
             </p>
           </div>
 

@@ -5,14 +5,16 @@
 </p>
 
 <table class="table">
-  <thead>
-      <tr>  
-        <th scope="col"><%= t('.title') %></th>
-        <th scope="col"><%= t('.level') %></th>
-        <th scope="col"><%= t('.questions') %></th>
-        <th colspan="4"><%= t('.actions') %></th>
-      </tr>
-  </thead>
+  <tr>
+    <th class="sort-by-title pointer">
+      <%= t('.title') %>
+      <%= octicon 'arrow-up', class: 'text-success hide' %>
+      <%= octicon 'arrow-down', class: 'text-success hide' %>
+    </th>
+    <th><%= t('.level') %></th>
+    <th><%= t('.questions') %></th>
+    <th colspan="4"><%= t('.actions') %></th>
+  </tr>
 
   <%= render @tests %>
 

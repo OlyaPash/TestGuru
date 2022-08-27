@@ -48,6 +48,7 @@ gem 'rails-i18n', '~> 7.0.0' # For 7.0.0
 
 gem 'jquery-rails'
 gem 'bootstrap', '~> 5.2.0-beta1'
+gem 'octicons_helper'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
