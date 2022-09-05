@@ -12,15 +12,24 @@
   <b><%= @test_passage.current_question.body %></b>
 </p>
 
-<%= form_with url: test_passage_path(@test_passage), method: :put do |form| %>
+<div class="progress" >
+  <%= content_tag :div, "Вопрос #{@test_passage.number_current_questions} из #{@test_passage.test.questions.count}", 
+                        class: "progress-bar progress-bar-info progress-bar-striped active",
+                        role: "progressbar",
+                        data: { current_question: @test_passage.number_current_questions, questions_count: @test_passage.test.questions.count},
+                        'aria_valuemin': '0',
+                        'aria_valuemax': '100' %>
+</div>
+
+<%= form_with url: test_passage_path(@test_passage), method: :put, data: {turbo: false} do |form| %>
   <div class="form-check">
-      <%= form.collection_check_boxes :answer_ids, @test_passage.current_question.answers, :id, :body, include_hidden: false do |b| %>
-        <p>
-          <%= b.check_box id: "answer_ids_#{b.object.id}" %>
-          <%= b.label %>
-        </p>
-      <% end %>
-    </div>
+    <%= form.collection_check_boxes :answer_ids, @test_passage.current_question.answers, :id, :body, include_hidden: false do |b| %>
+      <p>
+        <%= b.check_box id: "answer_ids_#{b.object.id}" %>
+        <%= b.label %>
+      </p>
+    <% end %>
+  </div>
 
   <p><%= form.submit t('.next'), class: 'btn btn-outline-primary' %></p>
   <p><%= link_to t('.back'), tests_path, class: 'btn btn-outline-primary' %></p>

@@ -124,12 +124,15 @@ en:
         level: "Level"
         questions: "Questions"
         actions: "Actions"
+      form_inline:
+        submit: "Ok"
       new:
         header: "Create New Test"
         back: "Back"
       test:
         show: "Show"
         edit: "Edit"
+        cancel: Cancel
         delete: "Delete"
         delete_confirm: "Are you sure?"
       show:
