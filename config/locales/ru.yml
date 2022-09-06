@@ -95,12 +95,15 @@ ru:
         level: "Уровень"
         questions: "Вопросы"
         actions: "Действия"
+      form_inline:
+        submit: "Ок"
       new:
         header: "Создание нового теста"
         back: "Назад"
       test:
         show: "Показать"
         edit: "Изменить"
+        cancel: "Отмена"
         delete: "Удалить"
         delete_confirm: "Вы уверены?"
       show:
