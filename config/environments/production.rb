@@ -65,15 +65,16 @@ Rails.application.configure do
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.perform_caching = false
-  config.action_mailer.default_url_options = { host: 'olya-pash-testguru.herokuapp.com' }
+  config.action_mailer.default_url_options = { host: 'evening-shore-22210.herokuapp.com' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = { 
-    address:              'smtp.gmail.com',
-    port:                 587,
+    address:              'smtp.yandex.ru',
+    port:                 465,
     user_name:            ENV['SMTP_USERNAME'],
     password:             ENV['SMTP_PASSWORD'],
-    domain:               'olya-pash-testguru.herokuapp.com',
     authentication:       'plain',
+    tls:                  true,
+    ssl:                  true,
     enable_starttls_auto: true }
 
   # Ignore bad email addresses and do not raise email delivery errors.
