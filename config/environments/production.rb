@@ -72,6 +72,7 @@ Rails.application.configure do
     port:                 465,
     user_name:            ENV['SMTP_USERNAME'],
     password:             ENV['SMTP_PASSWORD'],
+    domain:               'evening-shore-22210.herokuapp.com',
     authentication:       'plain',
     ssl:                  true,
     enable_starttls_auto: true }
