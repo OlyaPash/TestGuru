@@ -1,0 +1,6 @@
+<h1>Feedback from TestGuru:</h1>
+
+<% user = @feedback.user %>
+<p>От: <%= "#{user.name} #{user.last_name}" %></p>
+<p>Email: <%= "#{user.email}" %> </p>
+<p>Message: <%= @feedback.message %></p>
