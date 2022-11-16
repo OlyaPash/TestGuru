@@ -34,7 +34,11 @@ class TestPassage < ApplicationRecord
   private
 
   def correct_answer?(answer_ids)
-    correct_answers.ids.sort == answer_ids.map(&:to_i).sort
+    if answer_ids.present?
+      correct_answers.ids.sort == answer_ids.map(&:to_i).sort
+    else
+      false
+    end
   end
 
   def correct_answers
