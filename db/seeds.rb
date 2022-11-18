@@ -12,7 +12,7 @@ users = User.create!([
   { name: "Дж. Р. Р.", last_name: "Толкин", email: "dj@gmail.com", password: "gurus2" },
   { name: "Тимоти", last_name: "Джон Бернерс-Ли", email: "timoty@gmail.com", password: "gurus3" },
   { name: "Юкихиро", last_name: "Мацумото", email: "ukihi@gmail.com", password: "gurus4" },
-  { name: "Olya", last_name: "Pashkova", email: "pashk0vaolya@yandex.ru", password: "fortests", type: "Admin" }
+  { name: "Olya", last_name: "Pashkova", email: "olyailfatovna@yandex.ru", password: "fortests", type: "Admin" }
 ])
 
 categories = Category.create!([
