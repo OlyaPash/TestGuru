@@ -10,7 +10,7 @@ class GistsController < ApplicationController
 
     if result.success?
       Gist.create!(question: @test_passage.current_question, user: current_user, url: result.gist_url)
-      flash[:notice] = "#{I18n.t('.success')} - #{view_context.link_to(I18n.t('.link'), result.gist_url)}"
+      flash[:notice] = "#{I18n.t('.success')} - #{view_context.link_to(I18n.t('.link'), result.gist_url, target: '_blank')}"
     else
       flash[:alert] = I18n.t('.failure')
     end
