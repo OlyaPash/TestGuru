@@ -23,7 +23,7 @@
               <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control' %>
             </p>
 
-            <p>
+            <p class="input-password pointer">
               <%= f.label t('.password') %>
               <% if @minimum_password_length %>
                 <em>(<%= @minimum_password_length %> <%= t('.characters_minimum') %>)</em>
