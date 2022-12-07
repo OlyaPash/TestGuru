@@ -1,0 +1,22 @@
+<div class="row mt-3">
+  <div class="col col-md">
+    <h1 class ="display-4 text-center">Badges</h1>
+    <table class="table table-hover text-center mt-3">
+      <thead>
+        <tr>
+          <th scope="col">Title</th>
+          <th scope="col">Image</th>
+          <th scope="col">Rule</th>
+          <th scope="col">Attributes</th>
+          <th scope="col" colspan="3">Actions</th>
+        </tr>
+      <thead>
+      <tbody>
+        <%= render @badges %>
+      </tbody>
+    </table>
+
+    <%= link_to "New badge", new_admin_badge_path %> |
+    <%= link_to "Back", admin_tests_path %>
+  </div>
+</div>
