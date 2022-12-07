@@ -1,11 +1,11 @@
 <div class="row mt-3">
   <div class="col col-md">
-    <h1 class ="display-4 text-center">My Badges</h1>
+    <h1 class ="display-4 text-center"><%= t('.my_badges') %></h1>
     <table class="table table-hover text-center mt-3">
       <thead>
         <tr>
-          <th scope="col">Title</th>
-          <th scope="col">Image</th>
+          <th scope="col"><%= t('.title') %></th>
+          <th scope="col"><%= t('.image') %></th>
         </tr>
       </thead>
 
@@ -14,6 +14,6 @@
       <tbody>
     </table>
 
-    <%= link_to "Back", tests_path %>
+    <%= link_to t('.back'), tests_path %>
   </div>
 </div>

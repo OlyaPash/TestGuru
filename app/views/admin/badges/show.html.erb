@@ -1,11 +1,11 @@
 <div class="row justify-content-center mt-3">
   <div class="col col-md-8">
-    <h1 class ="display-4 text-center">Badge</h1>
+    <h1 class ="display-4 text-center"><%= t('.badge') %></h1>
 
     <div class="card border-secondary rounded mb-3 mt-4">
       <div class="card-body">
         <p>
-          <strong>Name badge:</strong>
+          <strong><%= t('.name_badge') %></strong>
           <%= @badge.title %>
         </p>
 
@@ -16,18 +16,18 @@
         </p>
 
         <p>
-          <strong>Rule badge:</strong>
+          <strong><%= t('.rule_badge') %></strong>
           <%= @badge.rule %>
         </p>
 
         <p>
-          <strong>Badge conditions:</strong>
+          <strong><%= t('.badge_conditions') %></strong>
           <%= @badge.rule_value %>
         </p>
 
         <p>
-          <%= link_to 'Edit', edit_admin_badge_path(@badge) %> |
-          <%= link_to "Back", admin_badges_path %>
+          <%= link_to t('.edit'), edit_admin_badge_path(@badge) %> |
+          <%= link_to t('.back'), admin_badges_path %>
         </p>
       </div>
     </div>

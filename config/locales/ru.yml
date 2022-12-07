@@ -81,7 +81,50 @@ ru:
       success: "Gist успешно сохранён!"
       failure: "Во время сохранения gist произошла ошибка"
 
+  badges:
+    index:
+      all_badges: "Все награды"
+      title: "Название"
+      image: "Изображение"
+      rule: "Правило"
+      back: "Назад"
+
+  user_badges:
+    index:
+      my_badges: "Мои награды"
+      title: "Название"
+      image: "Изображение"
+      back: "Назад"
+
   admin:
+    badges:
+      badge:
+        show: "Посмотреть награду"
+        edit: "Изменить"
+        delete: "Удалить"
+        delete_confirm: "Вы уверены?"
+      form:
+        back_to_badges: "Назад к наградам"
+        back_to_tests: "Назад к тестам"
+      edit:
+        editing_badge: "Редактировать награду"
+        show: "Посмотреть награду"
+      index:
+        badges: "Награды"
+        title: "Название"
+        image: "Изображение"
+        rule: "Правило"
+        attributes: "Атрибуты"
+        actions: "Действия"
+        new_badge: "Новая награда"
+        back: "Назад"
+      show:
+        badge: "Награда"
+        name_badge: "Название награды:"
+        rule_badge: "Правило:"
+        badge_conditions: "Условие:"
+        edit: "Изменить"
+        back: "Назад"
     tests:
       create:
         success: "Тест успешно создан."
