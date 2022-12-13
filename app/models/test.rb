@@ -14,6 +14,7 @@ class Test < ApplicationRecord
     .order(title: :desc) }
   scope :test_by_level, -> (level) { where(level: level) }
 
+  validates :timer, numericality: { only_integer: true }
   validates :level, numericality: { only_integer: true, greater_than: 0 }
   validates :title, presence: true,
                     uniqueness: { scope: :level }

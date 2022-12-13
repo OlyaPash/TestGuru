@@ -1,0 +1,6 @@
+<div class="text-danger">
+  <%= content_tag :div, nil,
+                  class: 'countdown',
+                  data: { timer: @test_passage.deadline.to_s }
+                  %>
+</div>
