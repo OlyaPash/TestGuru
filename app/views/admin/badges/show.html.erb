@@ -1,0 +1,35 @@
+<div class="row justify-content-center mt-3">
+  <div class="col col-md-8">
+    <h1 class ="display-4 text-center"><%= t('.badge') %></h1>
+
+    <div class="card border-secondary rounded mb-3 mt-4">
+      <div class="card-body">
+        <p>
+          <strong><%= t('.name_badge') %></strong>
+          <%= @badge.title %>
+        </p>
+
+        <p>
+          <% if @badge.image %>
+            <%= image_tag @badge.image, class: 'mr-3' %>
+          <% end %>
+        </p>
+
+        <p>
+          <strong><%= t('.rule_badge') %></strong>
+          <%= @badge.rule %>
+        </p>
+
+        <p>
+          <strong><%= t('.badge_conditions') %></strong>
+          <%= @badge.rule_value %>
+        </p>
+
+        <p>
+          <%= link_to t('.edit'), edit_admin_badge_path(@badge) %> |
+          <%= link_to t('.back'), admin_badges_path %>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,41 @@
+<%= form_with model: [:admin, @badge] do |form| %>
+  <%= render 'shared/errors', resource: @badge %>
+
+
+  <div class="form-group col-md-8">
+    <p>
+      <%= form.label :title %>
+      <%= form.text_field :title, id: :badge_title, class: 'form-control' %>
+    </p><br>
+
+    <p>
+      <%= form.label :image %>
+      <%= form.text_field :image, id: :badge_image, class: 'form-control' %>
+    </p><br>
+
+    <p>
+      <%= form.label :type %><br>
+      <%= form.select :rule, Badge::TYPE_BADGES.map  { |type| [ t(type), type ] }, class: 'form-control' %>
+    </p>
+
+    <div class="badge_options">
+      <p>
+        <%= form.label :rule_value %>
+        <%= form.text_field :rule_value, id: :badge_rule_value, autofocus: true, class: 'form-control badge_options'  %>
+      </p>
+    </div>
+
+    <p>
+      <%= form.submit class: 'btn btn-primary mt-1' %>
+    </p><br>
+
+    <p>
+      <%= link_to t('.back_to_badges'), admin_badges_path %>
+    </p>
+
+    <p>
+      <%= link_to t('.back_to_tests'), admin_tests_path %>
+    </p>
+  </div>
+
+<% end %>

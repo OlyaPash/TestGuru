@@ -9,6 +9,9 @@ Rails.application.routes.draw do
 
   resources :gists
 
+  resources :badges, only: :index
+  resources :user_badges, only: :index
+
   resources :tests, only: :index do
     member do
       post :start
@@ -35,6 +38,8 @@ Rails.application.routes.draw do
         delete :destroy
       end
     end
+
+    resources :badges
   end
 
   resources :feedbacks, only: %i[new create]
