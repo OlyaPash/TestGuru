@@ -8,6 +8,13 @@
   </p>
 </b>
 
+<div class="text-danger">
+  <%= content_tag :div, nil,
+                  class: 'countdown',
+                  data: { timer: @test_passage.deadline.to_s }
+                  %>
+</div>
+
 <p>
   <b><%= @test_passage.current_question.body %></b>
 </p>

@@ -31,6 +31,10 @@ class TestPassage < ApplicationRecord
     correct_percent >= SUCCESS_PERCENT
   end
 
+  def deadline
+    created_at + test.time.minutes
+  end
+
   private
 
   def correct_answer?(answer_ids)

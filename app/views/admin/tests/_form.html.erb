@@ -16,5 +16,10 @@
     <%= form.collection_select :category_id, Category.all, :id, :title_translated, prompt: true %>
   </p>
 
+  <p>
+    <%= form.label :time %><br>
+    <%= form.number_field :time %>
+  </p>
+
   <p><%= form.submit %></p>
 <% end %>
