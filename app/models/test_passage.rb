@@ -8,7 +8,7 @@ class TestPassage < ApplicationRecord
   before_validation :next_question
 
   def completed?
-    current_question.nil?
+    time_is_up? || current_question.nil?
   end
 
   def accept!(answer_ids)
@@ -20,7 +20,7 @@ class TestPassage < ApplicationRecord
   end
 
   def correct_percent
-    100.0 / test.questions.count * correct_questions
+    (100.0 / test.questions.count * correct_questions).round(1)
   end
 
   def number_current_questions
@@ -29,6 +29,16 @@ class TestPassage < ApplicationRecord
 
   def done?
     correct_percent >= SUCCESS_PERCENT
+  end
+
+  def time_is_up?
+    return false unless test.time.present?
+
+    Time.now > deadline
+  end
+  
+  def deadline
+    created_at + test.time.minutes
   end
 
   private
